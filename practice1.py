@@ -8,6 +8,9 @@ with open('reviews.txt','r') as p:
 		if count % 1000000 == 0 :
 			print(len(data))
 			count = 0
+data_new = []
+count = 0
 for i in data:
-	total_length += len(i)
-print(total_length/len(data))
+	if len(i) > 100:
+		data_new.append(i)
+print(len(data_new))
